@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins',sans-serif;
+}
+
+.split {
+    height: 100%;
+    width: 50%;
+    position: fixed;
+    top: 0;
+    overflow-x: hidden;
+}
+
+.left {
+    left: 0;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    height: 100%;
+    width: 70%;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid rgba(59, 235, 159, 1); /* Barra animada */
+    font-size: 2em;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.title .text {
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 0.15em solid rgba(59, 235, 159, 1);
+    animation: typing 3s steps(30, end), blink-caret 0.75s step-end infinite;
+}
+
+.title .cursor {
+    display: inline-block;
+    opacity: 0;
+    animation: blink-cursor 1s infinite;
+    color: rgba(59, 235, 159, 1);
+    font-weight: bold;
+}
+
+
+.right {
+    right: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(11deg, rgba(0,0,0,1) 65%, rgba(59,235,159,1) 100%);
+    color: #e0e0e0;
+    backdrop-filter: blur(150px);
+    -webkit-backdrop-filter: blur(150px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+.centered {
+    text-align: center;
+}
+
+.centered img {
+    max-width: 300px;
+    height: auto;
+}
+
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    
+    background: url('/public/img/   ')no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.form-box{
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2{
+    font-size: 2em;
+    color: #fff;
+    text-align: center;
+}
+
+.inputbox{
+    position: relative;
+    margin: 30px 0;
+    width: 310px;
+    border-bottom: 2px solid #fff;
+}
+
+.inputbox label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    color: #fff;
+    font-size: 1em;
+    pointer-events: none;
+    transition: .5s;
+}
+
+input:focus ~ label,
+input:valid ~ label{
+top: -5px;
+}
+
+.inputbox input {
+    width: 100%;
+    height: 50px;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding:0 35px 0 5px;
+    color: #fff;
+}
+
+.inputbox ion-icon{
+    position: absolute;
+    right: 8px;
+    color: #fff;
+    font-size: 1.2em;
+    top: 20px;
+}
+
+.forget{
+    margin: -15px 0 15px ;
+    font-size: .9em;
+    color: #fff;
+    display: flex;
+    justify-content: space-between;  
+}
+
+.forget label input{
+    margin-right: 3px;
+    
+}
+
+.forget label a{
+    color: #fff;
+    text-decoration: none;
+}
+
+.forget label a:hover{
+    text-decoration: underline;
+}
+
+button{
+    width: 100%;
+    height: 40px;
+    border-radius: 40px;
+    background: #fff;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    font-size: 1em;
+    font-weight: 600;
+}
+
+.register{
+    font-size: .9em;
+    color: #fff;
+    text-align: center;
+    margin: 25px 0 10px;
+}
+
+.register p a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+}
+
+.register p a:hover{
+    text-decoration: underline;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: rgba(59, 235, 159, 1); }
+}
+
+@keyframes blink-cursor {
+    from, to { opacity: 0; }
+    50% { opacity: 1; }
+}

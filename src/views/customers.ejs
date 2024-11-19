@@ -1,0 +1,84 @@
+<%- include('partials/_header') %>
+
+
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-3">
+                <img class="img-fluid" src="/img/LogoAdmin.jpg">
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <div class="card-body">
+                        <form action="/add" method="post">
+                            <div class="form-group">
+                                <input type="text" name="juegoName" placeholder="Nombre" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="juegoDescription" placeholder="Descripción" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="juegoPrice" placeholder="Precio" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="juegoQuantity" placeholder="Cantidad" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <input type="text" name="juegoImageUrl" placeholder="URL de la imagen" class="form-control">
+                            </div>
+                            <button type="submit" class="btn btn-primary">
+                                Guardar
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--Tabla de los datos-->
+        <div class="row mt-4">
+            <div class="col-md-12">
+                <table class="table table-bordered table-hover">
+                    <thead>
+                        <tr>
+                            <th>n°</th>
+                            <th>Juego</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Cantidad</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <% if (data) { %> <!--Comprobamos si tenemos datos-->
+                            <% for (var i=0; i < data.length; i++) { %>
+                                <tr> <!--Creamos las celdas de los datos y solicitamos sus propiedades-->
+                                    <td>
+                                        <%= (i + 1) %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].juegoName %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].juegoDescription %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].juegoPrice %>
+                                    </td>
+                                    <td>
+                                        <%= data[i].juegoQuantity %>
+                                    </td>
+                                    <td>
+                                        <a href="/update/<%= data[i].juegoId %>" class="btn btn-info">Editar</a>
+                                        <!--Lo va a buscar en la base de datos y lo va a editar--->
+                                        <a href="/delete/<%= data[i].juegoId %>" class="btn btn-danger">Eliminar</a>
+                                        <!--Lo va a buscar en la base de datos y lo va a eliminar-->
+                                    </td>
+                                </tr>
+                                <% } %>
+                                    <% } %>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <%- include('partials/_footer') %>

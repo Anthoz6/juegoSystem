@@ -1,0 +1,41 @@
+/* Estilos para las imágenes de juegos */
+.game-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 15px;
+    border: 2px solid #2ecc71; /* Borde verde esmeralda */
+}
+
+/* Estilos para las tarjetas */
+.card {
+    border: none;
+    border-radius: 15px; 
+    transition: transform 0.2s ease-in-out; 
+    background-color: #1e1e1e;
+    color: #fff;
+}
+
+.card:hover {
+    transform: scale(1.05); 
+}
+
+/* Estilos para los títulos de las tarjetas */
+.card-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    color: #2ecc71; /* Color verde esmeralda para los títulos */
+}
+
+/* Estilos para los encabezados */
+h1 {
+    font-family: 'Arial', sans-serif;
+    font-weight: 700;
+    color: #fff; /* Color blanco para los encabezados */
+}
+
+/* Estilos para los párrafos */
+p {
+    color: #ccc; /* Color gris claro para los párrafos */
+}

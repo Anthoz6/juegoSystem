@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0d0d0d;
+}
+
+.background-container {
+    position: relative;
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://www.pixelstalk.net/wp-content/uploads/2016/04/Dark-Universe-Background-HD-Free-Download.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.background-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Opacidad para oscurecer el fondo */
+}
+
+.form-container {
+    position: relative;
+    z-index: 2;
+    background-color: rgba(255, 255, 255, 0.1); /* Fondo semi-transparente */
+    padding: 30px;
+    border-radius: 10px;
+    width: 400px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+h2 {
+    color: #E2FFDC;
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+}
+
+.input-group {
+    margin-bottom: 15px;
+}
+
+input {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    background-color: #1f1f1f;
+    color: #E2FFDC;
+}
+
+input::placeholder {
+    color: #B6E6BA;
+}
+
+input:focus {
+    outline: none;
+    background-color: #2b2b2b;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #009879; /* Color verde acorde a la paleta */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #007B63;
+}

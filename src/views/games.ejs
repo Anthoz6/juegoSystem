@@ -1,0 +1,26 @@
+<%- include('partials/_header') %>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Lista de Juegos</h1>
+    <div class="row">
+        <% if (data && data.length > 0) { %>
+            <% for (var i = 0; i < data.length; i++) { %>
+                <div class="col-md-4 mb-4">
+                    <div class="card shadow-sm">
+                        <img src="<%= data[i].juegoImageUrl %>" class="card-img-top img-fluid game-img" alt="<%= data[i].juegoName %>">
+                        <div class="card-body">
+                            <h5 class="card-title"><%= data[i].juegoName %></h5>
+                            <p class="card-text"><%= data[i].juegoDescription %></p>
+                            <p class="card-text"><strong>Precio:</strong> $<%= data[i].juegoPrice.toFixed(2) %></p>
+                            <p class="card-text"><strong>Cantidad disponible:</strong> <%= data[i].juegoQuantity %></p>
+                        </div>
+                    </div>
+                </div>
+            <% } %>
+        <% } else { %>
+            <p class="text-center">No hay juegos disponibles en este momento.</p>
+        <% } %>
+    </div>
+</div>
+
+<%- include('partials/_footer') %>

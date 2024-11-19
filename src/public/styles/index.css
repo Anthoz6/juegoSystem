@@ -1,0 +1,109 @@
+/* Fondo oscuro general */
+body {
+    background-color: #181818;
+    color: #e0e0e0;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Hero Section */
+.hero-section {
+    background-image: url('https://wallpaperaccess.com/full/1074720.jpg'); /* Fondo atractivo */
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    z-index: 1;
+    position: relative;
+    color: #fff; /* Color del texto blanco para mejor contraste */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.5); /* Fondo oscuro para mejor legibilidad */
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.hero-content {
+    z-index: 3; /* Aseguramos que el texto esté por encima del overlay */
+    position: relative;
+    padding: 1rem;
+    max-width: 800px; /* Limitar el ancho del contenido */
+}
+
+.hero-section h1 {
+    font-size: 4rem; /* Tamaño gr   ande para el nombre de la página */
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Sombra para mejor visibilidad */
+}
+
+.hero-section p {
+    font-size: 1.5rem;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8); /* Sombra para mejor visibilidad */
+}
+
+.hero-button {
+    background-color: #2ecc71; /* Botón verde esmeralda */
+    border: none;
+    color: #fff;
+    padding: 0.75rem 2rem;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 5px;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+    background-color: #27ae60; /* Verde más oscuro en hover */
+}
+
+
+
+/* Sección de Información */
+.info-card {
+    background-color: #2a2a2a;
+    border-radius: 15px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.info-card:hover {
+    transform: scale(1.05);
+}
+
+.card-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: #fff;
+}
+
+.card-text {
+    color: #bbb;
+}
+
+.btn-outline-primary {
+    border-radius: 50px;
+    font-weight: 500;
+    color: #fff;
+    border-color: #2ecc71;
+}
+
+.btn-outline-primary:hover {
+    background-color: #2ecc71;
+    color: #000;
+}
+
+/* Ajuste de imágenes */
+.card-img-top {
+    border-radius: 15px 15px 0 0;
+}

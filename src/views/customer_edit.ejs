@@ -1,0 +1,32 @@
+<%- include('partials/_header') %>
+
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-5">
+            <div class="card">
+                <form action="/update/<%= data.juegoId %>" method="post">
+                    <div class="form-group">
+                        <input type="text" name="juegoName" value="<%= data.juegoName %>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="juegoDescription" value="<%= data.juegoDescription %>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="juegoPrice" value="<%= data.juegoPrice %>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="juegoQuantity" value="<%= data.juegoQuantity %>" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <input type="text" name="juegoImageUrl" value="<%= data.juegoImageUrl %>" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">
+                        Editar
+                    </button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<%- include('partials/_footer') %>
